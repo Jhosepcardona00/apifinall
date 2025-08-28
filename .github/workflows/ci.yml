@@ -1,26 +1,25 @@
-name: CI
-
+name: ci
 on:
   push:
-    branches:
-      - main
-      - develop
+    branches: [ main ]
   pull_request:
-    branches:
-      - main
-      - develop
+    branches: [ main ]
 
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
+      - name: Checkout del código
         uses: actions/checkout@v3
-      - name: Set up Node.js
+
+      - name: Instalar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.x'
-      - name: Install dependencies
+          node-version: '18'
+
+      - name: Instalar dependencias
         run: npm install
-      - name: Run tests
+
+      - name: Ejecutar pruebas
         run: npm test
