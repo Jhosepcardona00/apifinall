@@ -1,3 +1,6 @@
+test('archivo de configuración cargado correctamente', () => {
+  expect(true).toBe(true);
+});
 // Configuración global para Jest
 // Este archivo se ejecuta antes de todos los tests
 

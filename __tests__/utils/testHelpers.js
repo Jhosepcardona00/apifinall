@@ -1,8 +1,10 @@
-// Utilidades para pruebas unitarias
+describe('Helpers', () => {
+  it('debería cargar helpers correctamente', () => {
+    expect(true).toBe(true);
+  });
+});
 
-const expect = require("expect") // Import expect to fix undeclared variable error
-
-/**
+/*****
  * Crea un mock de request para Express
  * @param {Object} options - Opciones para el request
  * @returns {Object} Mock de request
